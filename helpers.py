@@ -1,8 +1,9 @@
 import json
 
-def get_all_recipes():
+def get_all_recipe_names():
     """Returns all recipes from data.json"""
-    ## how to access data from a .json
     with open('data.json', 'r') as f:
         all_recipes = json.load(f)
-    return all_recipes
+        all_recipe_names = [recipe['name'] for recipe in all_recipes['recipes']]
+   
+    return all_recipe_names
