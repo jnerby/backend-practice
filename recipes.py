@@ -18,4 +18,10 @@ class Recipes:
             if recipe['name'] == name:
                 return recipe
 
+    @classmethod
+    def update_recipe(cls, existing_recipe: dict, updated_recipe: dict):
+        for key, value in existing_recipe.items():
+            existing_recipe[key] = value
+
+
 
